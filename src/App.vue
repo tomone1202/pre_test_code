@@ -8,7 +8,7 @@
     </div>
     <div class="container">
       <div class="navbar">
-        <form class="">
+        <form>
           <input
             class="searchInput"
             type="search"
@@ -57,7 +57,9 @@
                 <div @click="times = 9" @click.prevent="jump()"></div>
               </div>
             </div>
-            <h2>{{ item.title }}</h2>
+            <h2>
+              <a href="#">{{ item.title }}</a>
+            </h2>
           </div>
         </div>
       </div>
@@ -298,7 +300,8 @@ function countDown(time, id) {
 <style scoped lang="sass">
 a
   text-decoration: none
-  color: blcak
+  color: white
+  background-color: rgba(0, 0, 50, 0.3)
   &:hover
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2)
 .lightbox
@@ -373,6 +376,7 @@ a
   justify-content: center
   position: sticky
   top: 0
+  z-index: 29
 
 .clock
   background-color: #dd7777
